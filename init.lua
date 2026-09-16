@@ -37,13 +37,11 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "cpp,hpp,h,c",
   command = "setlocal commentstring=//\\ %s"
 })
--- vimmm.api.nvim_create_autocmd("FileType", {
---.api.nvim_create_autocmd("FileType", {
---.api.nvim_create_autocmd("FileType", {
---     callback = function(ev)
---         pcall(vim.treesitter.start, ev.buf)
---     end,
--- })
+vim.api.nvim_create_autocmd("FileType", {
+    callback = function(ev)
+        pcall(vim.treesitter.start, ev.buf)
+    end,
+})
 
 vim.api.nvim_create_autocmd("FileType", {
     pattern = { "json", "jsonc" },
