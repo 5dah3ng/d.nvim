@@ -8,6 +8,14 @@ require("neo-tree").setup({
     },
   },
   async_directory_scan = "always",
+
+  window = {
+    mappings = {
+      ["F"] = function(state)
+        require("neo-tree-configs/neo-tree-diff").diff(state)
+      end,
+    },
+  },
 })
 
 vim.api.nvim_set_keymap('n', '<leader>nn', '<cmd>Neotree toggle<cr>', { noremap = true, silent = true })
