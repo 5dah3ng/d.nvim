@@ -1,3 +1,2 @@
 local opt = vim.opt
-
-opt.timeoutlen = 60000
+opt.timeoutlen = 300

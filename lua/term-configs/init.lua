@@ -2,7 +2,7 @@ require'toggleterm'.setup{
     open_mapping = [[<leader>ct]],
     terminal_mappings = true, 
     persist_size = true,
-    shell = "nu",
+    shell = vim.o.shell,
 }
 
 function _G.set_terminal_keymaps()
